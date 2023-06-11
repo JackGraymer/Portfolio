@@ -1,0 +1,47 @@
+<header id="header">
+    <h1 class="text-gradient"> <a href="/">Alvaro</a> </h1>
+    <div class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="social">
+        <button class="theme">light</button>
+        <a href="https://github.com/JackGraymer" target="_blank" class="github"> <button>Github</button></a>
+    </div>
+</header>
+
+<style>
+    header{
+        /* background-image: url("https://cdn.osxdaily.com/wp-content/uploads/2021/06/macos-monterey-12-Light-copy.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; */
+        padding: 0.5em;
+        margin: 0 1em;
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        position: sticky;
+        top: 0;
+    }
+
+    .nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 30%;
+        justify-self: start;
+    }
+</style>
+
+<script>
+    document.querySelector(".theme").addEventListener("click", () => {
+        document.querySelector(".theme").innerHTML = document.querySelector(".theme").innerHTML == "light" ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", document.documentElement.getAttribute("data-theme") == "light" ? "dark" : "light");
+    })
+</script>
