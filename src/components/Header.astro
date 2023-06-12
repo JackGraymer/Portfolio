@@ -1,3 +1,10 @@
+---
+import Icon from '../images/icons/icons-sun.svg'
+import IconGithub from '../images/icons/github-mark.svg'
+import IconGithubLight from '../images/icons/github-mark-white.svg'
+
+---
+
 <header id="header">
     <h1 class="text-gradient"> <a href="/">Alvaro</a> </h1>
     <div class="nav">
@@ -7,13 +14,14 @@
         <a href="#contact">Contact</a>
     </div>
     <div class="social">
-        <button class="theme">light</button>
-        <a href="https://github.com/JackGraymer" target="_blank" class="github"> <button>Github</button></a>
+        <button class="theme"> <img src={Icon}> </button>
+        <a href="https://github.com/JackGraymer" target="_blank" class="github"> <img class="gitIcon" src={IconGithubLight} alt="" width="40px"></a>
     </div>
 </header>
 
 <style>
     header{
+        z-index: 1;
         /* background-image: url("https://cdn.osxdaily.com/wp-content/uploads/2021/06/macos-monterey-12-Light-copy.jpeg");
         background-size: cover;
         background-position: center;
@@ -21,7 +29,7 @@
         height: 100vh; */
         padding: 0.5em;
         margin: 0 1em;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(1em);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -31,17 +39,64 @@
     }
 
     .nav{
+        font-weight: bold;
+        font-size: large;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         width: 30%;
         justify-self: start;
     }
+
+    a:hover{
+        text-decoration: underline;
+        text-underline-offset: 0.5em;
+        text-decoration-thickness: 0.1em;
+        transition: 0.5s;
+    }
+    
+    .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .theme{
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        border-radius: 50%;
+    }
+
+    .theme img, .github{
+        padding: 0;
+        margin: 0;
+        width: 3em;
+    }
+
+    .gitIconDark{
+        filter: invert(1);
+    }
+
+    @media screen and (max-width: 600px){
+        .nav{
+            display: none;
+        }
+    }
 </style>
 
 <script>
-    document.querySelector(".theme").addEventListener("click", () => {
-        document.querySelector(".theme").innerHTML = document.querySelector(".theme").innerHTML == "light" ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", document.documentElement.getAttribute("data-theme") == "light" ? "dark" : "light");
+    // Theme switcher and github icon color switcher
+    let theme = document.documentElement
+    let gitIcon = document.querySelector('.gitIcon')
+
+    document.querySelector('.theme').addEventListener('click', () => {
+        theme.setAttribute('data-theme', document.documentElement.getAttribute("data-theme") == "light" ? "dark" : "light")
+        gitIcon.classList.toggle('gitIconDark')
     })
+    
 </script>

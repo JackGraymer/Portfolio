@@ -13,13 +13,11 @@ html,body {
 :root {
     --background-color: #fff;
     --text-color: #121416d8;
-    --link-color: #543fd7;
 }
 
 html[data-theme="light"] {
     background-color: #fff;
     text: #121416d8;
-    link-color: #543fd7;
 }
 
 html[data-theme="dark"] {
@@ -40,15 +38,32 @@ a{
 }
 
 main {
-    margin: auto;
+    margin: 1em auto;
     padding: 1.5rem;
-    max-width: 60ch;
+    max-width: 900px;
+    border: 0.2em solid #8c58afcb;
+    border-radius: 1em;
 }
 h1 {
     font-size: 3rem;
     font-weight: 800;
     margin: 0;
 }
+
+img{
+    max-width: 100%;
+}
+
+blockquote{
+    padding: 1em 0.5em;
+    margin: 1em;
+    border-left: 0.3em solid #8c58afcb;
+}
+
+blockquote p{
+    margin: 0;
+}
+
 .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
