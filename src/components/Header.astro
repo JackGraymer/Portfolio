@@ -8,10 +8,10 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
 <header id="header">
     <h1 class="text-gradient"> <a id="title" href="/">Alvaro</a> </h1>
     <div class="social">
-        <a href="#about">About</a>
+        <a href="/about/">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#Contact">Contact</a>
     </div>
     <div class="social">
         <button class="theme"> <img src={Icon}> </button>
@@ -163,12 +163,10 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
     })
 
     // Hamburger menu
-     let hamburgerNav = document.querySelector('.hamburger-nav')
+    let hamburgerNav = document.querySelector('.hamburger-nav')
     document.querySelector('.burger').addEventListener('click', () => {
         hamburgerNav.style.display == 'grid' ? hamburgerNav.style.display = 'none' : hamburgerNav.style.display = 'grid'
         hamburgerNav.classList.toggle('hidden')
     }) 
     
-
-   
 </script>

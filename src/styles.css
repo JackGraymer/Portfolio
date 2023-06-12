@@ -96,3 +96,10 @@ blockquote p{
     gap: 1rem;
     padding: 0;
 }
+
+@media screen and (max-width: 954px) {
+    main {
+        border: none;
+    }
+}
+    
