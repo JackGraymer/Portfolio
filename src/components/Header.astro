@@ -6,8 +6,8 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
 ---
 
 <header id="header">
-    <h1 class="text-gradient"> <a href="/">Alvaro</a> </h1>
-    <div class="nav">
+    <h1 class="text-gradient"> <a id="title" href="/">Alvaro</a> </h1>
+    <div class="social">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
@@ -17,7 +17,21 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
         <button class="theme"> <img src={Icon}> </button>
         <a href="https://github.com/JackGraymer" target="_blank" class="github"> <img class="gitIcon" src={IconGithubLight} alt="" width="40px"></a>
     </div>
+    <button class="burger"> ☰ </button>
 </header>
+<div class="hamburger-nav" id="hidden">
+    <div class="links nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    </div>
+    
+    <div class="social">
+        <button class="theme"> <img src={Icon}> </button>
+        <a href="https://github.com/JackGraymer" target="_blank" class="github"> <img class="gitIcon" src={IconGithubLight} alt="" width="40px"></a>
+    </div>
+</div>
 
 <style>
     header{
@@ -27,8 +41,7 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
         background-position: center;
         background-repeat: no-repeat;
         height: 100vh; */
-        padding: 0.5em;
-        margin: 0 1em;
+        padding: 0.5em 1em;
         backdrop-filter: blur(1em);
         display: flex;
         justify-content: space-between;
@@ -46,6 +59,13 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
         align-items: center;
         width: 30%;
         justify-self: start;
+        gap: 1em;
+        padding: 1em;
+        margin: 0 1em;
+    }
+
+    .hamburger-nav{
+        display: none;
     }
 
     a:hover{
@@ -62,7 +82,7 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
         gap: 1em;
     }
 
-    .theme{
+    button{
         padding: 0;
         background: none;
         border: none;
@@ -70,6 +90,11 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
         outline: none;
         display: flex;
         border-radius: 50%;
+    }
+
+    .burger{
+        font-size: 3em;
+        display: none;
     }
 
     .theme img, .github{
@@ -82,9 +107,45 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
         filter: invert(1);
     }
 
+    #title{
+        text-decoration: none;
+    }
+
     @media screen and (max-width: 600px){
         .nav{
             display: none;
+        }
+
+        header .social{
+            display: none;
+        }
+
+        .burger{
+            display: flex;
+            color: rgba(131, 131, 131, 0.842);
+        }
+
+        .hamburger-nav{
+            position: fixed;
+            padding: 1em;
+            width: auto;
+            max-width: 70%;
+            background-color: #8c58afcb;
+            backdrop-filter: blur(1em);
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            height: 100vh;
+            transition: 0.3s;
+        }
+
+        .links{
+            font-size: larger;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
         }
     }
 </style>
@@ -94,9 +155,20 @@ import IconGithubLight from '../images/icons/github-mark-white.svg'
     let theme = document.documentElement
     let gitIcon = document.querySelector('.gitIcon')
 
-    document.querySelector('.theme').addEventListener('click', () => {
-        theme.setAttribute('data-theme', document.documentElement.getAttribute("data-theme") == "light" ? "dark" : "light")
-        gitIcon.classList.toggle('gitIconDark')
+    document.querySelectorAll('.theme').forEach(button => {
+        button.addEventListener('click', () => {
+            theme.setAttribute('data-theme', document.documentElement.getAttribute("data-theme") == "light" ? "dark" : "light")
+            gitIcon.classList.toggle('gitIconDark')
+        })
     })
+
+    // Hamburger menu
+     let hamburgerNav = document.querySelector('.hamburger-nav')
+    document.querySelector('.burger').addEventListener('click', () => {
+        hamburgerNav.style.display == 'grid' ? hamburgerNav.style.display = 'none' : hamburgerNav.style.display = 'grid'
+        hamburgerNav.classList.toggle('hidden')
+    }) 
     
+
+   
 </script>
