@@ -11,12 +11,12 @@ html,body {
 }
 
 :root {
-    --background-color: #fff;
+    --background-color: #eee;
     --text-color: #121416d8;
 }
 
 html[data-theme="light"] {
-    background-color: #fff;
+    background-color: #eee;
     text: #121416d8;
 }
 

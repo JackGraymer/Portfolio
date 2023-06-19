@@ -5,7 +5,7 @@ description: "Full Stack Web Developer based in Switzerland"
 ---
 
 <div class='banner'>
-<img src='https://raw.githubusercontent.com/JackGraymer/JackGraymer/main/src/img/javascript.gif' alt='JavasCript image Header'>
+<img src='/javascript.gif' alt='JavasCript image Header'>
 </div>
 
 <br>
