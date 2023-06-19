@@ -5,7 +5,7 @@ description: "Full Stack Web Developer based in Switzerland"
 ---
 
 <div class='banner'>
-<img src='https://raw.githubusercontent.com/JackGraymer/JackGraymer/main/src/img/javascript.gif'>
+<img src='https://raw.githubusercontent.com/JackGraymer/JackGraymer/main/src/img/javascript.gif' alt='JavasCript image Header'>
 </div>
 
 <br>
@@ -154,7 +154,7 @@ And none of those have been wasted time, in every one I have learnt valuable les
  
 <br>
 
-<img height="250" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jackgraymer&layout=compact&custom_title=Most%20used%20languages&langs_count=10&include_all_commits=true&hide_progress=false&hide_border=false&theme=dark&hide=">
+<img height="250" src="https://github-readme-stats-jackgraymer.vercel.app/api/top-langs/?username=jackgraymer&layout=compact&custom_title=Most%20used%20languages&langs_count=10&include_all_commits=true&hide_progress=false&hide_border=false&theme=dark&hide=">
 
 </div>
 
