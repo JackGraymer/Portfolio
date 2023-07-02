@@ -1,10 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Main from '../pages/Main.md';
+import { DOMParser } from "xmldom";
+export async function fetchMyDocument() {
+  try {
+    let response = await fetch("https://raw.githubusercontent.com/JackGraymer/JackGraymer/main/README.md"); // Gets a promise
+    let final = await response.text(); // Replaces body with response
+    console.log(final);
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(final, "text/html");
+    return doc;
+  } catch (err) {
+    console.log("Fetch error:" + err); // Error handling
+  }
+}
 ---
 
-<Layout title="Alvaro Readme">
+<Layout title="Alvaro Portfolio">
 	<main>
-		<Main />
+		{fetchMyDocument()}
 	</main>
 </Layout>
