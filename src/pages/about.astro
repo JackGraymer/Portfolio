@@ -5,7 +5,6 @@ export async function fetchMyDocument() {
   try {
     let response = await fetch("https://raw.githubusercontent.com/JackGraymer/JackGraymer/main/README.md"); // Gets a promise
     let final = await response.text(); // Replaces body with response
-    console.log(final);
     const parser = new DOMParser();
     const doc = parser.parseFromString(final, "text/html");
     return doc;
