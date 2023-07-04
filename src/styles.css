@@ -1,6 +1,8 @@
 :root {
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, transparent 60%);
+    --background-color: #eee;
+    --text-color: #121416d8;
     /* color: #F6F6F6;
     background-color: #222; */
 }
@@ -8,16 +10,12 @@ html,body {
     margin: 0;
     padding: 0;
     font-family: system-ui, sans-serif;
-}
-
-:root {
-    --background-color: #eee;
-    --text-color: #121416d8;
+    height: fit-content;
 }
 
 html[data-theme="light"] {
-    background-color: #eee;
-    text: #121416d8;
+    background-color: var(--background-color);
+    text: var(--text-color);
 }
 
 html[data-theme="dark"] {
@@ -37,13 +35,13 @@ a{
     color: inherit;
 }
 
-main {
+/* main {
     margin: 1em auto;
     padding: 1.5rem;
     max-width: 900px;
-    border: 0.2em solid #8c58afcb;
     border-radius: 1em;
-}
+} */
+
 h1 {
     font-size: 3rem;
     font-weight: 800;
@@ -97,9 +95,5 @@ blockquote p{
     padding: 0;
 }
 
-@media screen and (max-width: 954px) {
-    main {
-        border: none;
-    }
-}
+
     

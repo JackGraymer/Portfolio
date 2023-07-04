@@ -61,8 +61,6 @@ Almost easy peasy, now the **about** page is loaded with JS from Github (increas
 
 </details>
 
-<br>
-
 ## 📞 Contacts
 <ul>
 <li><strong><a href="mailto:&#97;&#99;&#x65;&#114;&#118;&#97;&#110;&#x63;&#x61;&#110;&#116;&#x6f;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#97;&#99;&#x65;&#114;&#118;&#97;&#110;&#x63;&#x61;&#110;&#116;&#x6f;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></strong></li>
