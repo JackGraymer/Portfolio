@@ -11,6 +11,7 @@ html,body {
     padding: 0;
     font-family: system-ui, sans-serif;
     height: fit-content;
+    transition: 500ms;
 }
 
 html[data-theme="light"] {
